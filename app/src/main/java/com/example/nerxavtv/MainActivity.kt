@@ -1,13 +1,15 @@
 package com.example.nerxavtv
 
+import android.app.SearchManager
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import androidx.lifecycle.Transformations.map
-import com.google.android.gms.maps.*
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
@@ -27,6 +29,9 @@ class MainActivity : AppCompatActivity() {
             val localisation1 = LatLng(50.63331985473633,3.0680081844329834)
             googleMap.addMarker(MarkerOptions().position(localisation1).title("MyDigitalSchool"))
             googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(localisation1, 15f))
+            googleMap.setOnInfoWindowClickListener {
+                MaRedirect()
+            }
         })
     }
 
@@ -42,5 +47,9 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-
+    fun MaRedirect() {
+        val intent = Intent(Intent.ACTION_WEB_SEARCH)
+        intent.putExtra(SearchManager.QUERY, "https://www.mydigitalschool.com/ecole-multimedia-lille")
+        startActivity(intent)
+    }
 }
