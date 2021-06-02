@@ -16,6 +16,9 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.example.nerxavtv.data.Training
+import com.example.nerxavtv.data.TrainingDao
+import com.example.nerxavtv.data.TrainingDatabase
 
 class MainActivity : AppCompatActivity() {
 
