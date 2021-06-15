@@ -33,17 +33,11 @@ class TrainingViewModel : ViewModel() {
         description = "certification professionnelle reconnue par l'État de niveau 6 : \"Concepteur Réalisateur Web et Digital\". Arrêté du 11 juillet 2018 publié au JO du 21 juillet 2018. Efficom.",
         code = "RNCP29826"
     )
-    private val training2 = com.example.nerxavtv.data.Training(
-        id = 2,
-        title = "Bachelor Développeur Web",
-        description = "certification professionnelle reconnue par l'État de niveau 6 : \"Concepteur - Développeur d'applications\" Arrêté du 12 octobre 2007, JO modificatif du 17 avril 2018. Ministère Chargé de l'Emploi. ",
-        code = "RNCP31678"
-    )
 
     init {
         viewModelScope.launch(Dispatchers.IO) {
             try {
-                trainingDao?.insert(training1, training2)
+                trainingDao?.insert(training1)
             }
             catch (e: Exception) {}
         }
