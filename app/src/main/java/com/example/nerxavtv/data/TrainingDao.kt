@@ -9,6 +9,9 @@ import androidx.room.Query
         @Query("SELECT * FROM training")
         fun getAll(): List<Training>
 
+        @Query("SELECT * FROM training WHERE id = :id")
+        fun getOneById(id: Int): Training
+
         @Insert
         fun insert(vararg training: Training)
     }
