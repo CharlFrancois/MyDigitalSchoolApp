@@ -4,21 +4,25 @@
     <item
         android:title="Ecole"
         android:icon="@drawable/school"
-        android:id="@+id/presentation_ecole2"
-        />
+        android:id="@+id/presentation_ecole2"/>
+        <!-- on match les id des items avec les id des framgent dans le nav graph-->
+
     <item
         android:title="Formation"
         android:icon="@drawable/graduationhat"
-        android:id="@+id/trainingFragment"
-        />
+        android:id="@+id/trainingFragment"/>
+    <!-- on match les id des items avec les id des framgent dans le nav graph-->
+
     <item
         android:title="Vie de l'école"
         android:icon="@drawable/heartbeat"
-        android:id="@+id/vie_ecole"
+        android:id="@+id/vie_ecole"/>
+    <!-- on match les id des items avec les id des framgent dans le nav graph-->
         />
     <item
         android:title="Contact"
         android:icon="@drawable/letter"
-        android:id="@+id/contactPage"
-        />
+        android:id="@+id/contactPage" />
+    <!-- on match les id des items avec les id des framgent dans le nav graph-->
+
 </menu>

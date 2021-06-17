@@ -24,10 +24,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main);
 
+        // on crée un navHostFragment pour contenir tous nos framgent, puis on le récupère avec le findFragment
         val navHostFragment = supportFragmentManager?.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        // on récupère l'élement bottomNavigation view grace à l'id qu'on lui a donné
         val navController = navHostFragment.navController
 
+        // on indique que la barre de navigation doit se coordonner avec le navcontroller pour gérer la navigation
         bottomNavigationView.setupWithNavController(navController)
     }
 }
