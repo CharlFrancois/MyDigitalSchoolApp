@@ -29,7 +29,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class mainFragment : Fragment() {
 
-
+// adding ggogle api key for the youtube api
     val api_key = "AIzaSyCnrcRd-zMj5Sq9twBs3V9mFskq65nyRt4"
 
     override fun onCreateView(
@@ -39,7 +39,7 @@ class mainFragment : Fragment() {
 
         return inflater.inflate(R.layout.fragment_presentation_ecole, container, false)
     }
-
+//Implementation of the Youtube API
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // Get reference to the view of Video player
