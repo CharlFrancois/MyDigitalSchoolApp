@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Ecole"
+        android:icon="@drawable/school"
+        android:id="@+id/presentation_ecole2"
+        />
+    <item
+        android:title="Formation"
+        android:icon="@drawable/graduationhat"
+
+        />
+    <item
+        android:title="Vie de l'école"
+        android:icon="@drawable/heartbeat"
+        android:id="@+id/vie_ecole"
+        />
+    <item
+        android:title="Contact"
+        android:icon="@drawable/letter"
+        android:id="@+id/contactPage"
+        />
+</menu>
