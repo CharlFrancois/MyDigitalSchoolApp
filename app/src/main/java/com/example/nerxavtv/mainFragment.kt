@@ -15,9 +15,7 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import com.google.android.youtube.player.YouTubeInitializationResult
-import com.google.android.youtube.player.YouTubePlayer
-import com.google.android.youtube.player.YouTubePlayerView
+import com.google.android.youtube.player.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -39,13 +37,14 @@ class mainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        return inflater.inflate(R.layout.fragment_contact_page, container, false)
+        return inflater.inflate(R.layout.fragment_presentation_ecole, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // Get reference to the view of Video player
-        val ytPlayer = view.findViewById<YouTubePlayerView>(R.id.ytPlayer)
+        //val ytPlayer = view.findViewById<YouTubePlayerView>(R.id.ytPlayer)
+       val  ytPlayer = (view as ViewGroup).getChildAt(1) as YouTubePlayerView
 
         ytPlayer.initialize(api_key, object : YouTubePlayer.OnInitializedListener{
             // Implement two methods by clicking on red error bulb
@@ -69,7 +68,7 @@ class mainFragment : Fragment() {
                 p0: YouTubePlayer.Provider?,
                 p1: YouTubeInitializationResult?
             ) {
-                //Toast.makeText(this , "Video player Failed" , Toast.LENGTH_SHORT).show()
+                Toast.makeText(context , "Video player Failed" , Toast.LENGTH_SHORT).show()
             }
         })
     }
