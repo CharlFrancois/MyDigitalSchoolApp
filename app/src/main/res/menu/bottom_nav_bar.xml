@@ -9,7 +9,7 @@
     <item
         android:title="Formation"
         android:icon="@drawable/graduationhat"
-
+        android:id="@+id/trainingFragment"
         />
     <item
         android:title="Vie de l'école"

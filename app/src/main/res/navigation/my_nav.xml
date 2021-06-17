@@ -17,4 +17,8 @@
         android:id="@+id/vie_ecole"
         android:name="com.example.nerxavtv.vie_ecole"
         android:label="vie_ecole" />
+    <fragment
+        android:id="@+id/trainingFragment"
+        android:name="com.example.nerxavtv.TrainingFragment"
+        android:label="TrainingFragment" />
 </navigation>

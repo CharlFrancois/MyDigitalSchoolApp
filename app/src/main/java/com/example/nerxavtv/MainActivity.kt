@@ -16,13 +16,7 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import android.widget.TextView
-import androidx.activity.viewModels
-import androidx.lifecycle.Observer
-import com.example.nerxavtv.data.Training
-import com.example.nerxavtv.data.TrainingDao
-import com.example.nerxavtv.data.TrainingDatabase
-import java.util.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,26 +29,5 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
 
         bottomNavigationView.setupWithNavController(navController)
-
-        TrainingDatabase.getInstance(this)
-        val trainingTitle: TextView = findViewById(R.id.textView2)
-        val trainingTitleObserver = Observer<Training?>{
-            trainingTitle.text = it?.title
-        }
-
-        val trainingDescription: TextView = findViewById(R.id.textView4)
-        val trainingDescriptionObserver = Observer<Training?>{
-            trainingDescription.text = it?.description
-        }
-
-        val trainingCode: TextView = findViewById(R.id.textView5)
-        val trainingCodeObserver = Observer<Training?>{
-            trainingCode.text = it?.code
-        }
-
-        viewModel.training.observe(this, trainingTitleObserver)
-        viewModel.training.observe(this, trainingDescriptionObserver)
-        viewModel.training.observe(this, trainingCodeObserver)
-        viewModel.findTrainingById(1)
     }
 }
